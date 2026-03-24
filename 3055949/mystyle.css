@@ -1,0 +1,81 @@
+/* IMPORTA AS FONTES DO GOOGLE */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Aboreto');
+
+/* FUNDO */
+body {
+  background-color: F9F8F6;
+  margin: 0;
+  font-family: 'Playfair Display', serif; /* texto normal */
+}
+
+/* CABEÇALHO */
+.header {
+  height: 70px;
+  background-color: #2B3A55;
+}
+
+/* CAIXA PRINCIPAL */
+.card {
+  padding: 20px;
+  margin: 0 80px;
+}
+
+/* TOPO */
+.topo {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* TÍTULO */
+h2 {
+  font-family: 'Aboreto', cursive; /* fonte nova */
+  font-size: 50px;
+  border-radius: 20px;
+  padding: 30px 60px;
+  background-color: # F9F8F6;
+  color: #3E0703
+}
+
+/* SUBTÍTULOS */
+h3 {
+  font-family: 'Aboreto', cursive; /* mesma fonte */
+  font-size: 30px;
+  margin-top: 30px;
+  border-radius: 15px;
+  padding: 8px 15px;
+  width: fit-content;
+  color: #3E0703
+  background-color: #FAF7F3;
+}
+
+h2, h3 {
+  box-shadow: 0 0 0 3px #CA8787;
+}
+
+/* TEXTOS */
+p {
+  font-size: 20px;
+}
+
+/* IMAGENS */
+.imgs {
+  display: flex;
+  gap: 35px;
+  margin-top: 30px;
+
+}
+
+/* IMAGEM */
+.imgs img {
+  height: 400px;
+  width: auto;
+  border-radius: 60px;
+}
+
+.imgs img {
+  box-shadow: 0 0 0 2px #CA8787; /* linha fininha */
+  padding: 5px; /* espaço pra linha aparecer melhor */
+  background-color: white; /* opcional, deixa mais bonito */
+}
