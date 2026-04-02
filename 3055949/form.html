@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <style>
+      }
+  </style>
+  <script src="sl3.js"></script>
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="form-wrapper">
-    <h2>Cadastrar</h2>
+    <h2 id =’titulo’>Cadastrar</h2>
     <form id="meuFormulario">
       <p class="label">Nome cidade</p>
       <input type="text" id="tituloCidade" placeholder="coloque o nome da cidade">
@@ -23,6 +28,7 @@
       <input type="text" id="textoDicas" placeholder="texto com dicas">
 
       <input type="submit" value="Enviar">
+      <button onClick = 'alterarFundo()'>adicionar</button>
     </form>
   </div>
 </body>
