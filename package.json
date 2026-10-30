@@ -1,0 +1,15 @@
+{
+  "name": "3055949",
+  "version": "1.0.0",
+  "description": "servidor teste dia 21 de agosto",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
