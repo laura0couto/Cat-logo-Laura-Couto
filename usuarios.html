@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastro de Usuários | Catálogo de Cidades</title>
+<link rel="stylesheet" href="crud.css">
+</head>
+<body data-cadastro="usuarios">
+<header class="topo">
+  <div class="logo">CATÁLOGO<span>+</span></div>
+  <a href="admin.html" class="voltar">← Painel de gerenciamento</a>
+</header>
+<main class="container">
+  <p class="subtitulo">Área administrativa</p>
+  <h1 id="tituloCadastro">Cadastro de Usuários</h1>
+  <p class="descricao">Gerencie os usuários e a preferência de notificações.</p>
+  <section class="card">
+    <h2>Adicionar ou editar registro</h2>
+    <div id="mensagem" class="mensagem"></div>
+    <form id="formCadastro">
+      <div id="campos"></div>
+      <div class="botoes">
+        <button type="submit" id="btnSalvar" class="btn btn-principal">Cadastrar</button>
+        <button type="reset" id="btnLimpar" class="btn btn-secundario">Limpar formulário</button>
+      </div>
+    </form>
+  </section>
+  <section class="card">
+    <h2>Usuários cadastrados</h2>
+    <div class="tabela-container">
+      <table>
+        <thead><tr><th>Dados do cadastro</th><th>Ações</th></tr></thead>
+        <tbody id="listaRegistros"><tr><td>Carregando registros...</td></tr></tbody>
+      </table>
+    </div>
+    <small class="ajuda">A lista será preenchida automaticamente com os dados do banco.</small>
+  </section>
+</main>
+<footer>Catálogo de Cidades © 2026<br>Área de gerenciamento</footer>
+<script src="cadastros.js"></script>
+</body>
+</html>

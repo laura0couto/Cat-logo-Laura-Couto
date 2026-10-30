@@ -1,0 +1,616 @@
+
+/* =========================================
+   CATÁLOGO DE CIDADES
+   Estilo inspirado no catálogo de Nova York
+========================================= */
+
+
+/* =========================================
+   1. FONTES E CONFIGURAÇÕES GERAIS
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #EDE8DF;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #1A2535;
+    line-height: 1.8;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+
+/* =========================================
+   2. CABEÇALHO
+========================================= */
+
+.header {
+    min-height: 68px;
+    padding: 12px 35px;
+    background: #0F1C33;
+    border-bottom: 2px solid #C9A84C;
+    border-radius: 0 0 18px 18px;
+}
+
+.header-conteudo {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.header h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: #FFFFFF;
+}
+
+.voltar {
+    color: #EDE8DF;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.voltar:hover {
+    color: #C9A84C;
+}
+
+
+/* =========================================
+   3. CONTEÚDO DAS PÁGINAS
+========================================= */
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+.admin-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 45px auto;
+}
+
+.identificacao {
+    color: #1B3A5C;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.descricao {
+    margin: 20px 0 30px;
+    font-size: 15px;
+}
+
+
+/* =========================================
+   4. TÍTULOS PRINCIPAIS
+========================================= */
+
+body > h1,
+main > h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #0F1C33;
+    margin: 20px 0;
+}
+
+h2 {
+    display: inline-block;
+    width: fit-content;
+    max-width: 100%;
+    padding: 15px 35px;
+    margin: 18px 0 28px;
+
+    background: #0F1C33;
+    color: #FFFFFF;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 300;
+    letter-spacing: 3px;
+
+    border-radius: 18px;
+    outline: 2px solid #C9A84C;
+    outline-offset: 4px;
+}
+
+
+/* =========================================
+   5. SUBTÍTULOS
+========================================= */
+
+h3 {
+    display: inline-block;
+    width: fit-content;
+    max-width: 100%;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    margin: 25px 0 18px;
+    padding: 8px 20px;
+
+    border-radius: 14px;
+    color: #FFFFFF;
+    background: #1B3A5C;
+
+    outline: 2px solid #C9A84C;
+    outline-offset: 3px;
+}
+
+
+/* =========================================
+   6. CARTÕES E ÁREAS DE CADASTRO
+========================================= */
+
+.card,
+.form-card,
+.secao,
+section,
+.admin-card {
+    background-color: #F8F5EF;
+    padding: 28px;
+    margin: 25px 0;
+    border-radius: 16px;
+    border: 1px solid #D8CCB8;
+    box-shadow: 0 4px 12px rgba(15, 28, 51, 0.08);
+}
+
+/* Títulos dentro dos cartões */
+
+.card h2,
+.form-card h2,
+.secao h2,
+section h2,
+.admin-card h2 {
+    margin-top: 10px;
+    margin-bottom: 28px;
+}
+
+
+/* =========================================
+   7. TEXTOS E PARÁGRAFOS
+========================================= */
+
+p {
+    font-size: 15px;
+    color: #1A2535;
+    line-height: 1.9;
+}
+
+/* Linha rosa delicada nos textos de dica */
+
+.card > p {
+    border-left: 2px solid #E8A0A0;
+    padding-left: 12px;
+    margin-top: 10px;
+}
+
+
+/* =========================================
+   8. FORMULÁRIOS
+========================================= */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 4px;
+
+    color: #1B3A5C;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+
+    border: 1px solid #C9BFAF;
+    border-radius: 8px;
+
+    background-color: #FFFEFC;
+    color: #1A2535;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #C9A84C;
+    box-shadow: 0 0 5px rgba(201, 168, 76, 0.3);
+}
+
+textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+
+/* =========================================
+   9. BOTÕES
+========================================= */
+
+button,
+.btn {
+    display: inline-block;
+    width: fit-content;
+
+    padding: 11px 24px;
+    margin-top: 15px;
+
+    border: 1px solid #C9A84C;
+    border-radius: 9px;
+
+    background-color: #0F1C33;
+    color: #FFFFFF;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover,
+.btn:hover {
+    background-color: #1B3A5C;
+    color: #E8B9C0;
+    transform: translateY(-2px);
+}
+
+/* Botão editar */
+
+button.editar,
+.btn-editar {
+    background-color: #1B3A5C;
+    border-color: #C9A84C;
+    color: #FFFFFF;
+}
+
+/* Botão excluir */
+
+button.excluir,
+.btn-excluir {
+    background-color: #D9A0A8;
+    border-color: #D9A0A8;
+    color: #0F1C33;
+}
+
+button.excluir:hover,
+.btn-excluir:hover {
+    background-color: #C78390;
+    border-color: #C78390;
+    color: #FFFFFF;
+}
+
+/* Botão secundário */
+
+.btn-secondary {
+    background-color: #1B3A5C;
+}
+
+
+/* =========================================
+   10. TABELAS
+========================================= */
+
+table {
+    width: 100%;
+    margin-top: 22px;
+
+    border-collapse: collapse;
+    background-color: #F8F5EF;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    padding: 14px;
+
+    background-color: #0F1C33;
+    color: #FFFFFF;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+    text-align: left;
+}
+
+td {
+    padding: 13px;
+    border-bottom: 1px solid #D8CCB8;
+
+    color: #1A2535;
+    font-size: 13px;
+}
+
+tr:hover td {
+    background-color: #F1E9DF;
+}
+
+
+/* =========================================
+   11. FOTOS DOS PAÍSES E CIDADES
+========================================= */
+
+.imgs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 36px;
+    margin-top: 22px;
+}
+
+.imgs > div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.imgs img {
+    width: 210px;
+    height: 270px;
+
+    object-fit: cover;
+    border-radius: 16px;
+
+    outline: 4px solid #E8A0A0;
+    outline-offset: 5px;
+
+    transition: outline-color 0.3s ease, transform 0.3s ease;
+}
+
+.imgs img:hover {
+    outline-color: #C9A84C;
+    transform: translateY(-3px);
+}
+
+.imgs p {
+    margin-top: 8px;
+
+    font-size: 11px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+
+    color: #3A4A60;
+    text-align: center;
+
+    border-left: none;
+    padding-left: 0;
+}
+
+
+/* =========================================
+   12. MENSAGENS DO SISTEMA
+========================================= */
+
+.mensagem,
+#mensagem {
+    margin-top: 15px;
+    padding: 12px;
+
+    border-left: 3px solid #C9A84C;
+    background-color: #F8F5EF;
+
+    color: #1A2535;
+    font-size: 13px;
+}
+
+/* Não mostra caixa vazia */
+
+.mensagem:empty,
+#mensagem:empty {
+    display: none;
+}
+
+
+/* =========================================
+   13. NAVEGAÇÃO
+========================================= */
+
+nav {
+    background-color: #1B3A5C;
+    padding: 14px 25px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+nav a {
+    color: #FFFFFF;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    color: #C9A84C;
+}
+
+
+/* =========================================
+   14. LINKS
+========================================= */
+
+a {
+    color: #1B3A5C;
+}
+
+a:hover {
+    color: #A47E2B;
+}
+
+
+/* =========================================
+   15. RODAPÉ
+========================================= */
+
+footer {
+    margin-top: 45px;
+    padding: 22px;
+
+    background-color: #0F1C33;
+    border-top: 2px solid #C9A84C;
+
+    color: #FFFFFF;
+    text-align: center;
+
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   16. RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .header {
+        padding: 15px 20px;
+    }
+
+    .header-conteudo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    main,
+    .admin-container {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    h2 {
+        font-size: 28px;
+        padding: 12px 20px;
+        white-space: normal;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .card,
+    .form-card,
+    .secao,
+    section,
+    .admin-card {
+        padding: 18px;
+    }
+
+    .imgs {
+        justify-content: center;
+    }
+
+    .imgs img {
+        width: 190px;
+        height: 240px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    button,
+    .btn {
+        max-width: 100%;
+    }
+}
+
+
+/* =========================================
+   OPÇÕES DE CADASTRO DO PAINEL
+========================================= */
+
+.admin-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.admin-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 65px;
+    padding: 15px 22px;
+
+    background-color: #0F1C33;
+    color: #FFFFFF;
+
+    border: 1px solid #C9A84C;
+    border-radius: 12px;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    letter-spacing: 1.5px;
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.admin-link:hover {
+    background-color: #1B3A5C;
+    color: #E8B9C0;
+    transform: translateY(-3px);
+}
+
+/* Ajuste para celular */
+@media (max-width: 700px) {
+    .admin-links {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
